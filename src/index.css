@@ -8,11 +8,14 @@
 body {
     font-family: 'Dongle', sans-serif;
 }
+ul {
+  list-style: none;
+  width: 100%;
+}
 
 .app {
   text-align: center;
 }
-
 .app-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -23,15 +26,16 @@ body {
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
-ul {
-  list-style: none;
-  width: 50%;
-}
-
 .tasks-item {
   border: 1px solid #d3d3d30f;
   margin-bottom: 15px;
   padding: 15px;
   border-radius: 5px;
+}
+.task-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border: none;
 }
