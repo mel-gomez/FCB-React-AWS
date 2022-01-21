@@ -23,11 +23,21 @@ function Task(props) {
     );
 }
 function TasksList() {
+    const tasksItemsList = [
+        "Follow Edukasyon.ph on Facebook.",
+        "Follow AWS Siklab Pilipinas on Facebook.",
+        "Follow Zuitt Coding Bootcamp on Facebook.",
+        "Follow Zuitt Coding Bootcamp on Instagram.",
+        "Follow Edukasyon.ph on Instagram.",
+    ];
+
+            //{tasksItemsList.map(task => (<Task taskName={task} />))}
     return (
         <ul>
-            <Task taskName="Follow Edukasyon.ph on Facebook." />
-            <Task taskName="Follow AWS Siklab Pilipinas on Facebook." />
-            <Task taskName="Follow Zuitt Coding Bootcamp on Facebook." />
+            {tasksItemsList.map((task, index) => {
+                console.log(task);
+                return <Task key={index} taskName={task} />
+            })}
         </ul>
     );
 }
