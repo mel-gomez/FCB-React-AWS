@@ -14,13 +14,18 @@ function TasksList() {
     const inputChangeHandler = (e) => {
         setTaskValue(e.target.value);
     };
-    const addTaskHandler = (e) => {
-        if (e.keyCode == 13) {
-            setTaskItemsList([taskValue, ...tasksItemsList]);
-            setTaskValue("");
+    const addTaskHandler = () => {
+        setTaskItemsList([taskValue, ...tasksItemsList]);
+        setTaskValue("");
             // e.target.value = "";
-        }
     };
+    // const addTaskHandler = (e) => {
+    //     if (e.keyCode == 13) {
+    //         setTaskItemsList([taskValue, ...tasksItemsList]);
+    //         setTaskValue("");
+    //         // e.target.value = "";
+    //     }
+    // };
 
     return (
         <>
@@ -28,7 +33,7 @@ function TasksList() {
                 className="task-input" 
                 placeholder="Create a new task"
                 onChange={inputChangeHandler}
-                onKeyUp={addTaskHandler}
+                onBlur={addTaskHandler}
                 value={taskValue}
             />
             <ul>
